@@ -1,0 +1,18 @@
+<div class="list">
+	<div class="list__title general-padding">
+		<h1>Todo List</h1>
+		<h3>A simple Angular TodoList App</h3>
+	</div>
+
+	<div class="list__items">
+		<app-item *ngFor="let item of items" [item]="item"></app-item>
+	</div>
+
+	<form class="list__footer general-padding">
+		<div class="form-field">
+			<label>New todo</label>
+			<input type="text" placeholder="New Todo" [(ngModel)]="newTaskTitle" [ngModelOptions]="{standalone: true}">
+		</div>
+		<button (click)="addItem()">ADD TODO</button>
+	</form>
+</div>

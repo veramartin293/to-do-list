@@ -1,0 +1,18 @@
+<div class="item general-padding">
+	<div class="item__info" *ngIf="!editMode">
+		<div class="title" (click)="toggleCompleted()" [class.task-completed]="isCompleted">
+			{{  item.title }}
+		</div>
+		<div class="actions">
+			<i class="fas fa-pen" (click)="setEditMode()"></i>
+			<i class="fas fa-trash" (click)="deleteItem()"></i>
+		</div>
+	</div>
+
+	<form class="item__edition" *ngIf="editMode" (ngSubmit)="saveEditedItem()">
+		<div class="form-field">
+			<input type="text" placeholder="New Todo" [(ngModel)]="item.title" [ngModelOptions]="{standalone: true}">
+			<button type="submit">SAVE</button>
+		</div>
+	</form>
+</div>

@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+  font-size: 1.1rem;
+  font-family: "Quicksand", sans-serif;
+  min-height: 100%;
+}
+
+button {
+  height: 40px;
+  border: 1px solid white;
+  padding: 8px 12px;
+  background-color: #ff6666;
+  color: white;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover {
+    background-color: #ff5e5e;
+  }
+}
+
+/* Helpers */
+.general-padding {
+  padding: 20px 30px;
+}
+
+.form-field {
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    outline: none;
+  }
+}
